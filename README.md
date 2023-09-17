@@ -7,15 +7,15 @@ Fui contratado pela melhor empresa de tecnologia do mundo: a CUBOS. Minha primei
 
 É uma RESTful API que permite:
 
-- Criar conta bancária
-- Listar contas bancárias
-- Atualizar os dados do usuário da conta bancária
-- Excluir uma conta bancária
-- Depósitar em uma conta bancária
-- Sacar de uma conta bancária
-- Transferir valores entre contas bancárias
-- Consultar saldo da conta bancária
-- Emitir extrato bancário
+- Criar conta bancária POST /contas
+- Listar contas bancárias GET /contas?senha_banco=Cubos123Bank
+- Atualizar os dados do usuário da conta bancária PUT /contas/:numeroConta/usuario
+- Excluir uma conta bancária DELETE /contas/:numeroConta
+- Depósitar em uma conta bancária POST /transacoes/depositar
+- Sacar de uma conta bancária POST /transacoes/sacar
+- Transferir valores entre contas bancárias POST /transacoes/transferir
+- Consultar saldo da conta bancária GET /contas/saldo?numero_conta=123&senha=123
+- Emitir extrato bancário GET /contas/extrato?numero_conta=123&senha=123
 
 Importante: Sempre que a validação de uma requisição falhar, terá uma resposta com código de erro e mensagem adequada à situação.
 
